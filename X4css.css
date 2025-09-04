@@ -1,0 +1,33 @@
+body {
+text-align: center;
+margin-top: 50px;
+font-family: Arial;
+background-color: #90EE90;
+}
+
+#display {
+width: 200px;
+height: 30px;
+font-size: 18px;
+margin-bottom: 10px;
+}
+
+.button {
+width: 45px;
+height; 45px;
+font-size: 18px;
+margin: 5px;
+}
+
+h1 {
+color: #000080;
+}
+
+h4 {
+color: #228B22;
+}
+
+
+
+
+
