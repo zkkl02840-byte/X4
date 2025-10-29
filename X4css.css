@@ -1,33 +1,97 @@
+/* --- General styling --- */
 body {
-text-align: center;
-margin-top: 50px;
-font-family: Arial;
-background-color: #90EE90;
-}
-
-#display {
-width: 200px;
-height: 30px;
-font-size: 18px;
-margin-bottom: 10px;
-}
-
-.button {
-width: 45px;
-height; 45px;
-font-size: 18px;
-margin: 5px;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  font-family: 'Josefin Sans', Arial, sans-serif;
+  background-color: #90EE90;
 }
 
 h1 {
-color: #000080;
+  color: #000080;
+  font-size: 1.6em;
+  margin-bottom: 5px;
 }
 
 h4 {
-color: #228B22;
+  color: #228B22;
+  font-size: 1em;
+  margin-bottom: 20px;
 }
 
+/* --- Calculator layout --- */
+.calculator {
+  background: #fff;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
 
+#display {
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  text-align: right;
+  margin-bottom: 15px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding-right: 10px;
+}
 
+/* --- Button grid --- */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
 
+.button {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #228B22;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
 
+.button:hover {
+  background-color: #0d47a1;
+}
+
+.special {
+  background-color: #000080;
+}
+
+.special:hover {
+  background-color: #0b3d91;
+}
+
+/* --- Responsive design --- */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2em;
+  }
+
+  h4 {
+    font-size: 0.9em;
+  }
+
+  .calculator {
+    width: 90%;
+    padding: 15px;
+  }
+
+  #display {
+    font-size: 18px;
+    height: 45px;
+  }
+
+  .button {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
