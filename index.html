@@ -1,38 +1,46 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Calculator demo</title>
-<link type="text/css" rel="stylesheet" href="X4css.css" >
-<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator Demo</title>
+  <link rel="stylesheet" href="X4css.css">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 </head>
+
 <body>
-<h1>A Calculator done in HTML, CSS, and a pinch of JAVASCIPT</h1>
-<h4>By a random CLASS X student whose name is definetly <b>not</b> <i>Levi Joel</i> (2025-2026)</h4>
-<br>
-<input type="text" id="display" disabled>
-<br>
-<button class="button" onclick="press('1')">1</button>
-<button class="button" onclick="press('2')">2</button>
-<button class="button" onclick="press('3')">3</button>
-<button class="button" onclick="press('+')">+</button>
-<br>
-<button class="button" onclick="press('4')">4</button>
-<button class="button" onclick="press('5')">5</button>
-<button class="button" onclick="press('6')">6</button>
-<button class="button" onclick="press('-')">-</button>
-<br>
-<button class="button" onclick="press('7')">7</button>
-<button class="button" onclick="press('8')">8</button>
-<button class="button" onclick="press('9')">9</button>
-<button class="button" onclick="press('*')">*</button>
-<br>
-<button class="button" onclick="press('.')">.</button>
-<button class="button" onclick="press('0')">0</button>
-<button class="button" onclick="calculate()">=</button>
-<button class="button" onclick="press('/')">/</button>
-<br>
-<button class="button" onclick="clearDisplay()">Billy</button>
-<button class="button" onclick="press('√')">√</button>
-<script src="X4java.js"></script>
-<br><br>
+  <h1>A Calculator done in HTML, CSS, and a pinch of JAVASCRIPT</h1>
+  <h4>By a random CLASS X student whose name is definitely <b>not</b> <i>Levi Joel</i> (2025–2026)</h4>
+
+  <div class="calculator">
+    <input type="text" id="display" disabled>
+
+    <div class="button-grid">
+      <button class="button" onclick="press('1')">1</button>
+      <button class="button" onclick="press('2')">2</button>
+      <button class="button" onclick="press('3')">3</button>
+      <button class="button" onclick="press('+')">+</button>
+
+      <button class="button" onclick="press('4')">4</button>
+      <button class="button" onclick="press('5')">5</button>
+      <button class="button" onclick="press('6')">6</button>
+      <button class="button" onclick="press('-')">-</button>
+
+      <button class="button" onclick="press('7')">7</button>
+      <button class="button" onclick="press('8')">8</button>
+      <button class="button" onclick="press('9')">9</button>
+      <button class="button" onclick="press('*')">*</button>
+
+      <button class="button" onclick="press('.')">.</button>
+      <button class="button" onclick="press('0')">0</button>
+      <button class="button" onclick="calculate()">=</button>
+      <button class="button" onclick="press('/')">/</button>
+
+      <button class="button special" onclick="clearDisplay()">Billy</button>
+      <button class="button special" onclick="press('√')">√</button>
+    </div>
+  </div>
+
+  <script src="X4java.js"></script>
 </body>
 </html>
