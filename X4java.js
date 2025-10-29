@@ -1,6 +1,10 @@
 function press(value) {
   const display = document.getElementById('display');
-  display.value += value;
+  if (value === '√') {
+    display.value += 'Math.sqrt(';
+  } else {
+    display.value += value;
+  }
 }
 
 function clearDisplay() {
@@ -10,9 +14,9 @@ function clearDisplay() {
 function calculate() {
   const display = document.getElementById('display');
   try {
-    let expression = display.value.replace('√', 'Math.sqrt(') + ')';
-    let result = eval(expression);
-    display.value = result;
+    // Add closing parentheses for Math.sqrt if missing
+    const fixedValue = display.value.replace(/Math\.sqrt\(([^)]*)$/, 'Math.sqrt($1)');
+    display.value = eval(fixedValue);
   } catch {
     display.value = 'Error';
   }
