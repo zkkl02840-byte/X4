@@ -1,5 +1,6 @@
 function press(value) {
-  document.getElementById('display').value += value;
+  const display = document.getElementById('display');
+  display.value += value;
 }
 
 function clearDisplay() {
@@ -7,10 +8,12 @@ function clearDisplay() {
 }
 
 function calculate() {
+  const display = document.getElementById('display');
   try {
-    let result = eval(document.getElementById('display').value);
-    document.getElementById('display').value = result;
+    let expression = display.value.replace('√', 'Math.sqrt(') + ')';
+    let result = eval(expression);
+    display.value = result;
   } catch {
-    document.getElementById('display').value = 'Error';
+    display.value = 'Error';
   }
 }
